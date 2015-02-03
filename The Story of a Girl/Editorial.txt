@@ -1,0 +1,15 @@
+If you read the problem statement you will find a pattern how rabbits and bunnies are increasing each day.
+
+On day 1 - 1 Pair
+On day 2 - 1 Pair
+On day 3 - 2 Pair
+On day 4 - 3 Pair
+
+and so on..
+
+if you write this sequence as 1,1,2,3,...N. You will notice that this a Fibonacci Sequence.
+Now the problem statement says output the numbers of rabbit and bunnies pairs on the Nth day. So you just have to print the Nth term of the fibonacci sequence.
+
+Note: The output can be very large therefore you need to print it modulo 10^9+7.
+
+Complexity : O(Log(n))
