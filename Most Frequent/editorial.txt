@@ -1,0 +1,4 @@
+Given N integers you just have to print the integer with maximum frequency.
+In case of a tie print the one with lower ASCII value.
+
+NOTE : write the shortest code possible.
