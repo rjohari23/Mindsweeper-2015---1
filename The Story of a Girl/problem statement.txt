@@ -1,11 +1,11 @@
 Once upon a time there was a girl who loved to garden. This girl liked to work in the garden to plant peas, weed watermelon, and grown all sorts of tasty and interesting fruits and vegetables. In fact, not only did this girl have a green thumb, her whole hand was green!
 On the first day of fall, the girl went into her garden to pluck some peas. There in front of her, merrily munching on some carrots, was ONE PAIR of bunnies Well, the bunnies were very cute, and the girl was very kind, so she let them be (A different kind of person may have shoo-ed them from the garden, but not this girl).
-On the second day of fall, the girl went to her garden again. This time, low and behold, those baby bunnies had turned to full-sized adult rabbits! ButÖ they were still cute, so she let that ONE PAIR alone. After all, what were a few cabbages? She didnít mind if they ate some of the vegetables.
-On the third day, the girl couldnít wait to get out to her garden. This time, she was all set to prune the parsnip. She looked around for her rabbits, but instead of seeing just one pair of rabbits, there were now TWO PAIRSñ an adult pair and a pair of babies. HmmmÖ
-The fourth day of fall was another lovely day, and so the girl went into her garden once again. ìOh my goodness!î she exclaimed. Not only were there the original adult rabbits, but the new bunnies had grown into adults and then the originals had had another set of baby bunnies. Now there were THREE PAIRS of rabbits and bunnies.
+On the second day of fall, the girl went to her garden again. This time, low and behold, those baby bunnies had turned to full-sized adult rabbits! But‚Ä¶ they were still cute, so she let that ONE PAIR alone. After all, what were a few cabbages? She didn‚Äôt mind if they ate some of the vegetables.
+On the third day, the girl couldn‚Äôt wait to get out to her garden. This time, she was all set to prune the parsnip. She looked around for her rabbits, but instead of seeing just one pair of rabbits, there were now TWO PAIRS‚Äì an adult pair and a pair of babies. Hmmm‚Ä¶
+The fourth day of fall was another lovely day, and so the girl went into her garden once again. ‚ÄúOh my goodness!‚Äù she exclaimed. Not only were there the original adult rabbits, but the new bunnies had grown into adults and then the originals had had another set of baby bunnies. Now there were THREE PAIRS of rabbits and bunnies.
 You kind of get the picture, right? The fifth day came along and there were FIVE PAIRS of rabbits and bunnies and so on, and so on, and so on.
 
-If this pattern were to continue, how many rabbits and bunnies would soon be in this girlís garden on Nth day? 
+If this pattern were to continue, how many rabbits and bunnies would soon be in this girl‚Äôs garden on Nth day? 
 
 Input : 
 First line of input contains T, the number of test cases.
@@ -18,3 +18,12 @@ Since the number can be very large, output it modulo 10^9+7.
 Constraints : 
 1<=T<=10^4
 1<=n<=10^8
+
+Sample Input:
+2
+5
+13
+
+Sample Out:
+5
+233
