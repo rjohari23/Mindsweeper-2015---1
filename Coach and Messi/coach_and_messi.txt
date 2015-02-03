@@ -1,0 +1,33 @@
+After the huge success of Hero ISL this season our friend is planning to play in the next season. He already has a team which contains some good players but they not so good. He wants his team to qualify for the next season but the coach is worried as they don't have a good player.
+
+Being a huge a fan of Lionel Messi he decided to buy Messi as he can very easily get their team qualified. ;) 
+
+He enquires about the price of Messi. On Day-1 his price is 'X'. As each day passes the price of Messi becomes 'X' times the price on previous day. Coach wants 'Y' days to think before buying him. With each passing day Messi's price is increasing.
+
+Since the coach is very weak in maths so he needs your help in calculating what will be the price of Messi on Yth day so that he can make an offer.
+
+
+Input:
+The first line of input contains an integer T, the number of testcases.
+Next T lines will contain two space separated integers X and Y.
+
+Output:
+Output contains T lines denoting the price of Messi on Yth day.
+Since the price can be extremely large therefore output it modulo 109+7.
+
+Constraints:
+1 <= T <= 10 
+1 <= X,Y <= 10^1000000
+
+NOTE : Some test files contains numbers upto 1000000 digits.
+
+Sample Input:
+3
+2 2
+3 4
+250000000 4
+
+Sample Output:
+4
+81
+660156264
