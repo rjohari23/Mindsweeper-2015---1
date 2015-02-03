@@ -1,0 +1,4 @@
+Given two strings as input you have to check if those two strings are permutations of each other or not.
+
+This can be possible if the two strings are of same length.
+Approach : Sort the two strings check if they are equal. Output YES or NO accordingly.
