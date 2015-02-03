@@ -1,0 +1,42 @@
+The ATM machine of State Bank of Patiala on Thapar Campus has a flaw in it and it takes a lot of time to complete a transaction.
+This machine is quite different from other's as it needed no card. Only thing it required is customer's unique ATM PIN and then his/her password.
+The Bank found out that the ATM PIN validation took maximum because the machine used to check the complete list of PINs as the PIN is being entered.
+
+Now the bank has hired you to look into the matter and identify the flaw. While working you discovered the flaw which was:
+If A's PIN is 1234 and B's PIN is 12345, B could not use his account as after entering 1234 he entered into A's account.
+
+You are given some lists of PINs of all the customers. You have to identify if this flaw is there in the given lists and output 'YES' or 'NO' accordingly without quotes.
+
+Example: 
+•Sarah 100 
+•Nitesh 1002599944 
+•Rahul 9742542682 
+In this case, it’s not possible for Nitesh to use his account, because the ATM would direct him into Sarah's account as soon as he will enter the first three digits of his PIN. 
+So this list would not be consistent and the output is NO.
+
+Constraints:
+1<=T<=40
+0<=PIN<10^10 
+
+Input:
+The first line of input contains a single integer "T" the number of test cases. Each test case starts with 'N', the number of customers.
+Then 'N' lines of each test case contains one unique PIN on each line. A PIN is a sequence of at most ten digits. 
+
+Output:
+For each test case, output "NO" if the list contains this flaw or "YES" otherwise without quotes.
+
+Sample Input:
+2
+3
+102
+1024
+123477
+3
+102
+1034
+123477
+
+
+Sample Output:
+NO
+YES

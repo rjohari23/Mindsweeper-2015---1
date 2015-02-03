@@ -1,0 +1,10 @@
+Method A - Use of set First add all PINs to a set A. Then for each of the PINs, remove the digits one by one from the end and check if the remainder
+is in A. The standard libraries typically provide efficient enough set structures based on either hashing or a balanced tree.
+
+
+Method B - Sorting First sort the PINs lexicographically. Then check each PIN if it is a prefix of the next PIN in the list.
+
+
+You can use Implement TRIE data structure used for searching and inserting using keys.
+
+Refer here : http://www.geeksforgeeks.org/trie-insert-and-search/
