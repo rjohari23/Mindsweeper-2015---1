@@ -1,0 +1,20 @@
+This problem is basically very easy.
+
+Here you don't need to consider ( a2>a1 and then a1>a2 ) and then ( a2>an && an>a2 ) like this because starting from any position ( 1,2,3,......)
+will give the same result. So starting from first position is enough to get the minimum distance Mr.IDC needs to walk every day.
+
+Approach :
+
+1. Sort the input.
+2. Then calculate sum of difference of room numbers as:
+	for ( i=1;i<n;i++ )
+		sum += a[i] - a[i-1];
+		
+	so on till last position and then multiply it by 2.
+	
+	
+Another Approach:
+
+1. Sort the input.
+2. Calculate difference between diff = (a[n-1] - a[0]) ,i.e., last and first room number.
+3. Output diff * 2.
