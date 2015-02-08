@@ -1,0 +1,48 @@
+Our friend 'DP' who is in second standard has recently learned about calculating average of two numbers ( m = (a+b)/2 ). He got really excited about it.
+When he returned home his elder brother told him about non-decreasing sequences ( e.g. s1,...,sn+1 where si <= si+1 for 1 <= i <= n ). 
+Since he is weak in maths he knew he couldn't remember two concepts for a long time. So he came up with brilliant idea. 
+He Decided to club the two concepts with the help of his brother. After many trials they came up with a new sequence called 'sequence of nondecreasing averages'.
+
+They defined this new sequence as p1,p2,.....,pn where pi = (si + si+1)/2. Example, sequence of nondecreasing averages of 3,6,9,9,12 is 4.5, 7.5 ,9, 10.5
+
+Now his elder brother decided to check how much 'DP' remembers by giving him a sequence of nondecreasing averages and asked him find the original sequence.
+After trying for few hours 'DP' came up with a solution but it was different from his brother's solution but he argued that his solution is also correct.
+Now he decided to find all the number of possible solutions to the given sequence of nondecreasing averages. Since it will take a lot of time for him to do this, 
+so he decided to take your help in writing a program for this task.
+
+Contraints:
+2 <= N <= 5*10^6
+0 <= pi <= 10^9
+
+Input:
+First line of input contains N number of elements in the sequence of nondecreasing averages.
+The next N lines contain the element. The ith line contains the element pi ( 1<=i<=N ).
+
+Output:
+Output contains a single integer denoting the number of possible non-decreasing sequences.
+
+Sample Input:
+4
+0
+2
+5
+7
+
+Sample Output:
+2
+
+Explanation:
+The 2 possible original sequences are 0,0,4,6,8 & -1,1,3,7,7
+
+Sample Input:
+4
+0
+1
+4
+5
+
+Sample Output:
+0
+
+Explanation:
+There is no possible nondecreasing sequence. Therefore output is 0.
