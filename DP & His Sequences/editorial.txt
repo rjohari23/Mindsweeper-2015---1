@@ -1,26 +1,39 @@
-Observe that the definition of non-decreasing averages can be applied to any
-sequence. If we remove the condition that sequence s1,...,sn+1 is non-decreasing but fixing a single si fixes the entire
-sequence, given its average sequence p1,p2,...,pn. 
-Now let us define the reflection operation 'R' on integer 'A' with respect to center 'C' as follows: R(A,C) = B iff 1/2(A+B) = C ,i.e., R(A,C) = 2C-A. 
-If si is fixed, then si+1 = R(si,pi) and si-1 = R(si,pi-1), etc. 
-Hence, there exist an infinite number of sequences s1,...,sn+1 that have the given sequence p1,p2,...,pn as average sequence — one for each choice of s1.
+Observe that the definition of non-decreasing averages can be applied to any sequence. If we remove the condition that 
+sequence s1,...,sn+1 is non-decreasing but fixing a single si fixes the entire sequence, given its average sequence 
+p1,p2,...,pn. 
+Now let us define the reflection(mirror) operation 'R' on integer 'A' with respect to center 'C' as follows: 
+R(A,C) = B iff 1/2(A+B) = C ,i.e., R(A,C) = 2C-A. If si is fixed, then si+1 = R(si,pi) and si-1 = R(si,pi-1), etc. 
+Hence, there exist an infinite number of sequences s1,...,sn+1 that have the given sequence p1,p2,...,pn as 
+average sequence â€” one for each choice of s1.
 
-There is a finite number of non-decreasing sequences though. A simple upper bound on the number of possible non-decreasing sequences may be
-p2 - p1 + 1, which is the number of integers between p1 and p2 (inclusive). This is because s2 must satisfy p1 <= s2 <= p2. 
-Indeed, if s2 < p1 then s1 > p2 and therefore s2 < s1 so the sequence is not non-decreasing. Similarly, if s2 > p2 then s3 < p2 giving a sequence which is not non-decreasing either.
+There is a finite number of non-decreasing sequences though. A simple upper bound on the number of possible non-decreasing 
+sequences may be p2 - p1 + 1, which is the number of integers between p1 and p2 (inclusive). 
+This is because s2 must satisfy p1 <= s2 <= p2. Indeed, if s2 < p1 then s1 > p2 and therefore s2 < s1 so the sequence 
+is not non-decreasing. Similarly, if s2 > p2 then s3 < p2 giving a sequence which is not non-decreasing either.
 
-This way we can construct a solution, which tests all the possible values of s2 lying between p1 and p2, and for each such s2 it computes the rest of
-the sequence and then checks if it is non-decreasing. Such a solution works in O(n(p2 - p1 + 1)) time and can be implemented with O(n) or better O(p2 - p1 +1) memory complexity.
+This way we can construct a solution, which tests all the possible values of s2 lying between p1 and p2, and for each such s2 
+it computes the rest of the sequence and then checks if it is non-decreasing. 
+Such a solution works in Time complexity = O(n(p2 - p1 + 1)) and can be implemented with O(n) or 
+better O(p2 - p1 +1) memory complexity.
+
 
 Optimal solution:
 
-Following definition will be useful : a value v feasible for si in the given sequence, when there exists an nondecreasing sequence s1,...,sn+1 with si = v 
-and average sequence p1,p2,...,pn. Now an important observation. If, for some i, values A and B with A <= B are feasible for si, then every C in the interval [A,B] is feasible for si.
+
+Read this first : 
+a value 'V' feasible for si in the given sequence, when there exists an nondecreasing sequence s1,...,sn+1 with si = V 
+and average sequence p1,p2,...,pn. 
+Now an important observation. If for some i values A and B with A <= B are feasible for si, then every C in the interval [A,B] 
+is feasible for si.
 
 The actual number of nondecreasing sequences s1,...,sn+1 can be obtained by generalizing the problem as follows. 
-Given a nondecreasing sequence p1,p2,...,pn, determine the interval of feasible values for sn+1. The answer is then the size of that interval. In the model solution the interval of 
-feasible values of sn+1 is computed inductively. We start with the case n = 0. In this case, the interval of feasible values for s1 consists of all integers: (-inf,+inf). 
-Now let [a,b] be the interval for nondecreasing sequences s1,...,sn+1 having average sequence p1,p2,...,pn. Let us consider the average sequence p1,p2,...,pn extended by a
-new element pn+1 > pn. This reduces the possible values for sn+1 to the interval [a,min(b,pn+1)], and hence the interval for sn+2 is the reflection of this interval, i.e, 
-[r(min(b,pn+1),pn+1),r(a,pn+1)]. We consider interval [a,b] as empty if a > b, and otherwise it contains b - a + 1 elements. This way we obtain O(n) time complexity 
-and O(1) memory complexity solution, because there is no need to store the entire sequence in memory. Intervals of feasible values can be computed while reading the input data.
+
+Given a nondecreasing sequence p1,p2,...,pn, determine the interval of feasible values for sn+1. The answer is then 
+the size of that interval. In the model solution the interval of feasible values of sn+1 is computed by induction. 
+We start with the case n = 0. In this case, the interval of feasible values for s1 consists of all integers: (-inf,+inf). 
+Now let [a,b] be the interval for nondecreasing sequences s1,...,sn+1 having average sequence p1,p2,...,pn. 
+Let us consider the average sequence p1,p2,...,pn extended by a new element pn+1 > pn(non-decreasing according to problem statement).
+This reduces the possible values for sn+1 to the interval [a,min(b,pn+1)] and hence the interval for sn+2 is the reflection
+of this interval, i.e, [r(min(b,pn+1),pn+1),r(a,pn+1)]. We consider interval [a,b] as empty if a > b(conflicting with problem statement),
+and otherwise it contains b - a + 1 elements. This way we obtain O(n) time complexity and O(1) memory complexity solution, 
+because there is no need to store the entire sequence in memory as intervals of feasible values can be computed during input.
