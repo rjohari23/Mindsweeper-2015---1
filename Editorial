@@ -1,9 +1,0 @@
-Given two large numbers X and Y, we have to find (X^Y) % MOD. X^Y can be written as X*X*X..... Y times. 
-So we can simply take X%MOD. But since X is a large number(upto 100000 digits) we have to store it in a character array or as string and perform modulo digit by digit.
-
-Since x*10+y %MOD = ((x%MOD)*10 + y)%MOD we can iteratively do for all digits. Next we note that 10^9+7 is a prime number.
-
-According to Fermat's Little Theorem, X^(p-1) = 1 % p , where p is a prime number. Hence we take Y%(p-1) = Y%(10^9+6). 
-Now we have two 9 digit numbers which we solve using fast exponentiation.
-
-Read here for Fermat's Little Theorem - http://en.wikipedia.org/wiki/Fermat%27s_little_theorem
